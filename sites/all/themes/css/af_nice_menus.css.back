@@ -1,0 +1,94 @@
+/*
+  This is the default layout template for nice menus, and will provide
+  a starting point for the look of your menus. To customize, it's
+  recommended to create a custom CSS file using this file as a template,
+  then configure the module to use your custom CSS file
+  (this is done in the global settings tab of the theme administration.)
+
+  See README.txt and the handbook page (http://drupal.org/node/185543)
+  for more information on using the CSS.
+*/
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #FFF;
+}
+
+ul.nice-menu li {
+  border: 1px solid #FFF;
+  border-top: 0;
+  float: left; /* LTR */
+  background-color: #A2D500;
+}
+
+ul.nice-menu a {
+  padding: 0.3em 5px 0.3em 5px;
+  color: #726D6A;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+ul.nice-menu a.active {
+  color: #726D6A !important;
+}
+
+ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px; /* LTR */
+  border: 0;
+  border-top: 1px solid #FFF;
+  margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li {
+  width: 12.5em;
+}
+
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li {
+  border-top: 1px solid #FFF;
+}
+
+ul.nice-menu-down li li {
+  border-top: 0;
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+/*  padding-right: 15px; /* LTR */
+}
+
+ul.nice-menu-down li.menuparent, 
+ul.nice-menu-down li.menuparent:hover, 
+ul.nice-menu-down li li.menuparent, 
+ul.nice-menu-down li li.menuparent:hover {
+  background-color: #A2D500; /* LTR */
+}

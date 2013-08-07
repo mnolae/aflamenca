@@ -1,0 +1,13 @@
+name = Brilliant Gallery
+description = Highly customizable Drupal module producing multiple table galleries of quality-scaled images from either a pre-defined local folder, or from any Picasa gallery.
+;dependencies[] = lightbox2
+;dependencies[] = colorpicker
+package = Media
+core = 7.x
+
+; Information added by drupal.org packaging script on 2013-04-13
+version = "7.x-1.6"
+core = "7.x"
+project = "brilliant_gallery"
+datestamp = "1365869416"
+

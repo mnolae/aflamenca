@@ -1,0 +1,8 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+/* PROPIAS OMEGA */
+body { background-color: #E1F97F; }
+.branding-data { background: transparent url('../images/header.jpg') no-repeat top center; height: 230px; }
+
+/* GENERADAS */

@@ -1,0 +1,349 @@
+0. Metadata
+-----------
+File version:	$Id$
+Copyright:		Copyright 2006 - 2011 Matias Aguire. All rights reserved.
+License:		GNU General Public License version 2 or later.
+
+1. Copyright and disclaimer
+---------------------------
+This application is opensource software released under the GPL.  Please
+see source code and the LICENSE file
+
+
+2. Changelog
+------------
+This is a non-exhaustive (but still near complete) changelog for
+Joomla! 1.6, including alpha and beta versions.
+Our thanks to all those people who've contributed bug reports and
+code fixes.
+
+Legend:
+
+* -> Security Fix
+# -> Issue Fix
+$ -> Language fix or change
++ -> Addition
+^ -> Change
+- -> Removed
+! -> Note
+
+Jul 11, 2012 Matias Aguirre
+ + Adding Banners clients and tracks migration
+
+Jul 01, 2012 Matias Aguirre
+ + Adding Adsmanager plugin
+ + Adding Avreloaded plugin
+ + Adding CsvImproved plugin
+ + Adding Docman plugin
+ + Adding redTextLibrary plugin
+ + Adding XMap plugin
+
+Jun 26, 2012 Matias Griese
+ ^ Fix menu aliases generation where there was no reason to rename alias
+ ^ Improve code readability on error handling (category, menu migration)
+ ^ Fix fatal error when migrating categories (component only)
+ ^ Fix htmlencoded strings which are escaped in J!2.5
+
+Jun 25, 2012 Matias Aguirre
+ ^ Fix legacy mode on new Joomla versions
+
+Jun 18, 2012 Matias Aguirre
+ ^ Updating redComponents plugins
+
+Jun 12, 2012 Matias Aguirre
+ + Adding FlippingBook plugin
+
+Jun 04, 2012 Matias Aguirre
+ ^ Updating joomla sql file to v2.5.4
+
+Jun 01, 2012 Matias Aguirre
+ ^ Updating some 3rd party extensions plugin
+ + Adding database driver to configuration
+ ^ Better compatibility with joomla-platform 12.1
+
+Apr 13, 2012 Matias Aguirre
+ + Adding Akeeba Release System
+
+Mar 28, 2012 Matias Aguirre
+ + Adding SobiPro plugin
+ + Adding HikaShop plugin
+ + Adding Highslide JS plugin
+ + Adding FLEXIcontent plugin
+ + Adding JComment plugin
+ + Adding Ambra Suscriptions plugin
+ + Adding AllEvents plugin
+ + Adding aiContactSafe plugin
+ + Adding AdminTools plugin
+ + Adding AceSEF plugin
+ ^ Fixing JCE migration
+
+Mar 22, 2012 Matias Aguirre
+ ^ Fix #31: Category ID=1 gets lost during migration …
+
+Mar 21, 2012 Matias Aguirre
+ ^ Fix #29 Uncategorized items (no category) get moved into wrong category …
+ ^ Fix category ordering to be the same as in Joomla 1.5 
+ ^ Fix #23 Main Menu module looses its menu assigments
+
+Mar 09, 2012 Matias Aguirre
+ ^ Fix a bug in menus where page header was shown when show_page_heading=0
+ ^ Fix creating uncategorized categories if database prefix changed
+
+Mar 05, 2012 Matias Aguirre
+ ^ Fixing root id on categories
+ ^ Fixing broken categories
+ + Adding uncategorized categories
+ ^ Config formating 
+
+Mar 02, 2012 Matias Aguirre
+ ^ Keeping the categories id's
+
+Mar 02, 2012 Matias Aguirre
+ + Skip core migration added to configuration
+
+Feb 27, 2012 Matias Aguirre
+ # Always use mysqli on new installation
+ # Update prefix
+
+Feb 17, 2012 Matias Aguirre
+ + Better error handler
+
+Feb 16, 2012
+ # Using the same js file in all browsers
+ # Prevent JGLOBAL_ARTICLE_MUST_HAVE_TEXT error
+ + Updating K2 migration
+ + Adding Acyba Mailing support
+ # Fixing the database schema
+ # Revert back the menu ids mapping
+ # Disable default modules
+ # Parameter show_page_title still on new Joomla
+ ^ Running checks and cleanup together
+
+Feb 16, 2012 Kriechi
+ # Updated release-script
+ # Fixed space-tab conversion in config-files.
+ - Removed DROP of previous migration tables
+
+Feb 15, 2012 Kriechi
+ # Moved deletePreviousMigration to cleanup-section
+ # Fixed wrong spacer-text
+ # Parameter to delete previous migration 
+
+Feb 14, 2012 Matias Aguirre
+ # Small fixes on jUpgradeExtensions class
+ + Cleanup categories migration
+ # JTable:store() run an update if id exists so we create them first
+
+Feb 12, 2012 Kriechi
+ # Fix imageurl in banner-migration
+ # Fix for com_banners-categories not correctly added with index-offset
+
+Feb 09, 2012 Matias Aguirre
+ # Keeping id on menus 
+
+Feb 03, 2012 Matias Aguirre
+ + Check if the grant values are returned 
+
+13-Dec-2011 Matias Aguirre
+ ^ Fix options save as initial
+
+06-Dec-2011 Matias Aguirre
+ ^ Remove unused config
+ # Add option to disable set_time_mode() function
+ + Adding Jumi support
+ + Adding redMEMBER support
+ ^ Correct comments
+ # Separe js debug and php debug
+
+01-Dec-201 Matias Aguirre
+ + Adding JEvents support
+ + Adding Akeeba Backup support
+ ^ cosmetical changes 
+
+16-Nov-2011 Matias Aguirre
+ ^ Better way to get directory path
+ ^ Disable SEF by default
+
+14-Nov-2011 Matias Aguirre
+ ^ Updating Joomla package to v1.7.3
+ # replacing setError function to Exception in jUpgradeCategory class
+
+01-Nov-2011 Matias Aguirre
+ # Fix menu assigments on modules
+ # Better mootools version checks and debugging
+ # Fixed Joomla 1.7 core-updating bug
+ ^ Updating Joomla 1.7 package to rev 22320
+
+31-Oct-2011 Matias Aguirre
+ # Fix "skip extension" option
+
+17-Oct-2011 Matias Aguirre
+ + Adding JomSocial support
+ + Adding redFORM support
+ # Categories migration rewrited
+
+4-Sep-2011 Matias Aguirre
+ + Adding JCE support
+ + Adding Contact Enhanced support
+ # Fixing 3rd extension categories using xml
+
+30-Sep-2011 Matias Aguirre
+ + Adding redSHOP support
+ + Adding CommunityBuilder support
+ ^ Better 3rd extensions management (thanks Matias Griese) 
+ ! Joomla package updated to 1.7.1
+ + Scroll down in each step (thanks Marco Barbosa)
+
+16-Ago-2011 Matias Aguirre
+ + Added Virtuemart support
+ + Added compojoomComment support
+ + Added BreezeForms support
+ $ added Russian (ru-RU) translation (thank Alexey Baskinov)
+ $ added Lituanian (lt-LT) translation (thanks Martis)
+ $ updated Traditional Chinese (zh-TW) thanslation (thanks abokuo)
+ $ updated French (fr-FR) translation (thanks Olivier)
+ $ updated sk-SK translation (thanks P3T3R)
+
+2-Ago-2011 Matias Aguirre
+ ^ Joomla packages updated
+ # Run default config values if not saved
+ + Copy images/media files
+
+20-Jul-2011 Matias Aguirre
+ ^ Prefix database naming rewrited
+ # Fix download progress bar
+
+19-Jul-2011 Matias Aguirre
+ ^ Mootools structure improvements
+ ^ More improvements in 3rd extensions support
+ ^ Target directory is now variable (an idea from Hugo Baronti)
+ # Changeable name when Joomla 1.7 is selected (thanks mbabker)
+ + Skip templates copy and skip 3rd extensions added
+ $ adding Thai (th-TH) translation (thank lungkao)
+
+3-Jun-2011 Matias Aguirre
+ + Joomla 1.7 support
+ ^ Menu migration rewrite
+ # Fix download stuck when config is not saved
+
+7-May-2011 Ronald Pijpers
+ ^ Directly access to Joomla controller
+
+3-May-2011 Matias Griese
+ # Fixes broken menu in Kunena migration
+
+3-May-2011 Matias Aguirre
+ ^ Split the component/module/plugin/template migration
+ - Remove quote title replacing in menus
+ - Remove unused cloneTable method
+ 
+2-May-2011 Matias Aguirre
+ # Fixes menu alias and path issue
+ # Prevent warning is lastid is not set
+ - Remove duplicated method getUsergroupIdMap in users migration
+
+2-May-2011 Matias Griese
+ # Fix fatal bug in jUpgrade::saveState()
+ + Add function jUpgrade::checkTimeout() and start using it
+ + Add com_kunena.php and com_kunena.xml into extensions
+ + Add function jUpgradeExtensions::getInstance() to get extension adapter
+ ^ Greatly simplify logic in extensions_controller.php (put into classes)
+ + Add logic to find upgrade files in jUpgradeExtensions::getSourceData()
+ ^ jUpgrade::setDestinationData(): allow passing data by parameter
+ ^ Split jUpgrade::copyTable(): add new function jUpgrade::cloneTable()
+ ^ jUpgrade::cloneTable(): add parameter to drop table, use it by default
+ + Add new functions jUpgrade::getUpdateSite(), getCopyFolders(), getCopyTables()
+ ^ Split jUpgrade::migrateExtensionData() into migrateExtensionTables(), migrateExtensionFolders() and migrateExtensionCustom()
+ + Add new function jUpgrade::output() to output migration information back to AJAX
+ ^ Add new function jUpgrade::getUsergroupIdMap(), currently filled with fixed data
+ ^ jUpgrade::getUsergroupIdMap() should not be static as it might use DB in the future
+
+28-Apr-2011 Matias Griese
+ # Fixed bad REGEXP escape sequence in jUpgradeContent::getSourceData()
+ ^ Add empty doctypes for all xml files to remove errors/warnings in Zend Studio
+ # Fixed bad xhtml in the template
+ $ Add fi-FI translation
+ + Add state field to j16_jupgrade_steps allowing internal state and breakpoints for slow tasks
+ ^ Rename extension adapters to have com_ prefix
+ + Add initial support for modules and plugins (they are just not imported yet)
+ + Add breakpoint support for jUpgrade class and extensions controller
+ + Add logic to save/restore internal state in jUpgrade class
+ + Add extension version detection to avoid migration with incompatible versions
+
+09-Apr-2011 Matias Aguirre
+ # Fixing single quote in all migrations 
+ ^ Skip checks option added
+ ^ Better checks for PHP and MySQL
+ $ Update zh-TW  translation
+
+09-Mar-2011 Matias Aguirre
+ # Fixed menu alias link 
+
+08-Mar-2011 Matias Aguirre
+ # Fixed the jos_ prefix when we get params
+ # Fixed simple quotes in content and categories
+ + Better checkings
+ $ Update pt-BR translation
+
+26-Feb-2011 Matias Aguirre
+ + Adding Molajo revision 727
+ + Check if "System - Mootools Upgrade" is enabled
+ # Run install_config.php before cleanup database
+ $ et-EE and hu-HU languages added
+ ^ Moving params to view
+
+22-Feb-2011 Matias Aguirre
+ + Initial support for Internet Explorer
+ + Category/blog view link fixed
+ # Content archive migration fixed
+ # 'Home menu' bug fixed
+
+18-Feb-2011 Matias Aguirre
+ ^ Fixing asset_id in categories migration
+ + Replace section link in menu migration
+ + Change position and name in modules migration
+ + Adding module menu mapping support
+ + Adding j16_jupgrade_modules table in install.sql
+ $ Adding pl-PL languages
+ $ Adding ro-RO languages
+
+16-Feb-2011 Matias Aguirre
+ ^ Rewrite migrations steps process for better compatibility
+ $ Adding nl-NL languages
+
+15-Feb-2011 Matias Aguirre
+ # Fix categories section/extension issues
+ ^ Using addStyleSheet function to add css's
+ ^ Convert section field to VARCHAR(255) in j16_jupgrade_categories table
+ - Assets rebuild in content migration not needed any more
+
+12-Feb-2011 Matias Aguirre
+ ^ Adding slashes in single quote only
+ ^ Change tables charset to UTF-8
+ + Set timelimit to 0 to prevent stuck's
+
+11-Feb-2011 Matias Aguirre
+ + Adding real escape in categories and content fields
+ - Remove migrate.js debug in download
+
+10-Feb-2011 Matias Aguirre
+ + Adding debug option
+ - Remove polls (not present in Joomla 1.6)
+ # Fixed usergroups query and notice
+ # Small fix if sid not exits in categories
+ $ Adding el-GR and fr-FR languages
+
+09-Feb-2011 Matias Aguirre
+ # Fixed parent_id in menus migration
+
+08-Feb-2011 Matias Aguirre
+ + Adding contact, weblinks, newsfeeds and banners categories migration
+ ^ Assets and categories rewrited
+ # Content migration fix
+
+08-Feb-2011 Andrew Eddie
+ ! Code formatting, trim trailing white space, set SVN properties.
+
+07-Feb-2011 Andrew Eddie
+ ! Added missing index.html files to some folders.
+ ^ Added PHP 5.2.4 check on installation.
