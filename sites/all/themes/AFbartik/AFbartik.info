@@ -1,0 +1,11 @@
+
+name = AFbartik
+description = Adaptación del tema bartik para la web de Autoestima Flamenca.
+package = Core
+version = 1.0
+core = 7.x
+base theme = bartik
+
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/colors.css
